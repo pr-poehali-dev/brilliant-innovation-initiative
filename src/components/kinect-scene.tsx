@@ -77,8 +77,8 @@ export function KinectScene() {
     pointSize: { value: 2, min: 1, max: 10, step: 1 },
     zOffset: { value: 1000, min: 0, max: 4000, step: 1 },
     circleRadius: { value: 0.7, min: 0.0, max: 0.7, step: 0.01 },
-    bgColor: { value: '#080818' },
-    videoColor: { value: '#ff6a00' }
+    bgColor: { value: '#0a0a14' },
+    videoColor: { value: '#a78bfa' }
   })
 
   // Create geometry and material
@@ -106,7 +106,7 @@ export function KinectScene() {
         pointSize: { value: 2 },
         zOffset: { value: 1000 },
         circleRadius: { value: 0.5 },
-        videoColor: { value: new THREE.Color('#ff6a00') }
+        videoColor: { value: new THREE.Color('#a78bfa') }
       },
       vertexShader,
       fragmentShader,
@@ -236,7 +236,7 @@ export function KinectScene() {
 
   return (
     <>
-      <color attach="background" args={[bgColor]} />
+      
       <Environment preset="sunset" />
       <points ref={meshRef} geometry={geometry} material={material} />
       {videoLoadError && (
